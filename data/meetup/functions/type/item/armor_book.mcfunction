@@ -1,0 +1,2 @@
+#Made By Fan_Fan_tom
+give @s knowledge_book{display:{Name:'{"text":"§c抽獎之書"}',Lore:['{"text":"§f能夠抽取隨機一種鑽石裝"}','{"text":"§f能不能抽到好東西全憑運氣"}']},HideFlags:1,armor_book:1b,Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}],Recipes:["minecraft:diamond_block"]} 1

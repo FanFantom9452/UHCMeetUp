@@ -1,0 +1,13 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:lime_wool",
+		"minecraft:light_blue_wool",
+		"minecraft:red_wool",
+		"minecraft:oak_sign",
+		"minecraft:diamond_block",
+		"minecraft:wooden_sword",
+		"minecraft:netherite_sword",
+		"minecraft:nether_star"
+	]
+}

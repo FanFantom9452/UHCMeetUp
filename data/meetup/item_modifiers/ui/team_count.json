@@ -1,0 +1,31 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      [
+        {
+          "text": "§b隊伍數量 ",
+          "color": "white",
+          "italic": false
+        },
+        {
+          "score": {
+            "name": "teamCount",
+            "objective": "command"
+          },
+          "color" : "gold",
+          "italic": false,
+          "bold": true,
+          "underlined": true
+        },
+        {
+          "text": "§r §b隊§7(1隊則為Free For All / FFA)",
+          "color": "white",
+          "italic": false
+        }
+      ]
+    ],
+    "replace": false
+  }
+]
