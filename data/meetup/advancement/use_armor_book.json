@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": "minecraft:book"
+                }
+              }
+            }
+          }
+        ],
+        "item": {
+          "items": "minecraft:book",
+          "components": {
+            "minecraft:custom_data": "{armor_book:1b}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "meetup:type/work/adv/use_armor_book"
+  }
+}

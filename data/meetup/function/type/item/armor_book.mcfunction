@@ -1,2 +1,2 @@
 #Made By Fan_Fan_tom
-give @s knowledge_book[custom_name='"§c抽獎之書"',lore=['"§f能夠抽取隨機一種鑽石裝"','"§f能不能抽到好東西全憑運氣"'],custom_data={armor_book:1b},enchantments={levels:{"minecraft:vanishing_curse":1},show_in_tooltip:false},recipes=["diamond_block"]] 1
+give @s book[custom_name='["§c抽獎之書§7(",{"color":"gray","italic":false,"keybind":"key.use"},"§7使用)"]',lore=['"§f能夠抽取隨機一種鑽石裝"','"§f能不能抽到好東西全憑運氣"'],custom_data={armor_book:1b},enchantments={levels:{"minecraft:vanishing_curse":1},show_in_tooltip:false},food={nutrition:0,saturation:0,can_always_eat:true},consumable={consume_seconds:1000000,animation:"none"},max_stack_size=1] 1

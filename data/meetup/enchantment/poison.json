@@ -1,0 +1,41 @@
+{
+  "description": "劇毒",
+  "supported_items": "minecraft:flow_armor_trim_smithing_template",
+  "primary_items": "minecraft:flow_armor_trim_smithing_template",
+  "weight": 1,
+  "max_level": 5,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 30,
+    "per_level_above_first": 5
+  },
+  "anvil_cost": 4,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:apply_mob_effect",
+          "to_apply": "minecraft:poison",
+          "min_duration": {
+            "type": "minecraft:levels_squared",
+            "added": 1
+          },
+          "max_duration": {
+            "type": "minecraft:levels_squared",
+            "added": 0
+          },
+          "min_amplifier": 0,
+          "max_amplifier": 0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:enchanted_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:flow_armor_trim_smithing_template",
+          "components": {
+            "minecraft:custom_data": "{sp_ench_weapon:1b}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "meetup:type/work/adv/special_enchantment/weapon"
+  }
+}
