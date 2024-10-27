@@ -30,8 +30,6 @@ scoreboard objectives add kill_list playerKillCount "擊殺數"
 
 scoreboard objectives add playerID dummy "玩家ID"
 scoreboard objectives add lastAttackerID dummy "最後攻擊我的玩家"
-scoreboard objectives add eat_GH minecraft.used:minecraft.enchanted_golden_apple "吃下金頭顱"
-scoreboard objectives add use_Kbook minecraft.used:minecraft.knowledge_book "使用知識之書"
 
 #設置隊伍
 team add team "剩餘隊伍"

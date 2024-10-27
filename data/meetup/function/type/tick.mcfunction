@@ -6,6 +6,7 @@ execute as @a unless score @s playerID matches -2147483648..2147483647 run funct
 
 #tick
 scoreboard players enable @a[tag=admin] trigger
+#管理員觸發安裝
 execute if score status command matches 0 as @a[scores={trigger=9487945},tag=admin] at @s align xyz run function meetup:install
 
 #剛加入遊戲的設定
@@ -23,6 +24,7 @@ execute if score status command matches 1 run effect give @a weakness infinite 1
 execute if score status command matches 1 run effect give @a resistance infinite 4 true
 execute if score status command matches 1 run effect give @a regeneration infinite 4 true
 
+#大廳特效
 execute if score status command matches 1 at @e[type=marker,tag=first_set] positioned ~ 300.25 ~ run particle end_rod ~ ~ ~ 10 0 10 0.005 2 force @a[distance=..50]
 
 #setting

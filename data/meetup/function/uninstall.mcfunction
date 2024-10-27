@@ -17,7 +17,7 @@ kill @e[type=minecraft:armor_stand,tag=death_chest]
 effect clear @a
 title @a times 20 100 20
 title @a subtitle {"text":"\u89e3\u9664\u5b89\u88dd\u6210\u529f","color":"yellow"}
-title @a title ["",{"text":"\uff35\uff28\uff23","color":"gold"},{"text":" \uff2d\uff45\uff45\uff54 \uff35\uff50","color":"red"}]
+title @a title "§6§lUHC §c§lMeet Up"
 effect give @a minecraft:resistance 9487 87 true
 
 

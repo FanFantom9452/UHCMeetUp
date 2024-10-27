@@ -1,0 +1,23 @@
+[
+  {
+    "function": "minecraft:set_custom_data",
+    "tag": "{sp_ench_weapon:1b}"
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "target": "item_name",
+    "name": [
+      {
+        "text": "轉魔鍛造板",
+        "color": "light_purple",
+        "italic": false
+      },
+      {
+        "text": "(已轉化為附魔書型態)",
+        "color": "gray",
+        "italic": false
+      }
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 {
-  "description": "劇毒",
-  "supported_items": "minecraft:flow_armor_trim_smithing_template",
+  "description": "毒刃",
+  "supported_items": "#meetup:special_enchantment/weapon",
   "primary_items": "minecraft:flow_armor_trim_smithing_template",
   "weight": 1,
   "max_level": 5,
@@ -12,7 +12,7 @@
     "base": 30,
     "per_level_above_first": 5
   },
-  "anvil_cost": 4,
+  "anvil_cost": 7,
   "slots": [
     "mainhand"
   ],
@@ -25,15 +25,25 @@
           "type": "minecraft:apply_mob_effect",
           "to_apply": "minecraft:poison",
           "min_duration": {
-            "type": "minecraft:levels_squared",
-            "added": 1
+            "type": "minecraft:linear",
+            "base": 5,
+            "per_level_above_first": 3
           },
           "max_duration": {
-            "type": "minecraft:levels_squared",
-            "added": 0
+            "type": "minecraft:linear",
+            "base": 5,
+            "per_level_above_first": 3
           },
           "min_amplifier": 0,
           "max_amplifier": 0
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "meetup:type/work/special_enchantment/weapon/poison"
         }
       }
     ]
