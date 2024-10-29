@@ -2,6 +2,7 @@
   {
     "function": "minecraft:set_name",
     "entity": "this",
+    "target": "custom_name",
     "name": [
       [
         {
@@ -14,9 +15,9 @@
             "name": "teamCount",
             "objective": "command"
           },
-          "color" : "gold",
-          "italic": false,
+          "color": "gold",
           "bold": true,
+          "italic": false,
           "underlined": true
         },
         {
@@ -25,7 +26,6 @@
           "italic": false
         }
       ]
-    ],
-    "replace": false
+    ]
   }
 ]

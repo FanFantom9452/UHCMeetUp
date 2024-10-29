@@ -31,6 +31,9 @@ scoreboard objectives add kill_list playerKillCount "擊殺數"
 scoreboard objectives add playerID dummy "玩家ID"
 scoreboard objectives add lastAttackerID dummy "最後攻擊我的玩家"
 
+scoreboard objectives add page dummy "第幾頁"
+
+
 #設置隊伍
 team add team "剩餘隊伍"
 

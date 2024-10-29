@@ -21,31 +21,23 @@ execute as @a at @s run title @s actionbar ["",{"text":"\u4e2d\u5fc3\u9ede (","c
 
 
 #縮圈
-
 team join yellow 遊戲時間
 scoreboard players add 遊戲時間 list 1
 execute if score border_time border_time matches 1.. run scoreboard players remove border_time border_time 1
 execute store result bossbar minecraft:border_time value run scoreboard players get border_time border_time
 #Level
 #1
-execute if score border_time border_time matches 0 if score borderLevel border_time matches 0 if score ing border_time matches 0 run function meetup:type/work/border/1_start
-execute if score border_time border_time matches 0 if score borderLevel border_time matches 1 if score ing border_time matches 1 run function meetup:type/work/border/1_end
+execute if score border_time border_time matches 0 if score borderLevel border_time matches 0 if score ing border_time matches 0 run function meetup:type/work/border/start {border_time:60,range:400}
+execute if score border_time border_time matches 0 if score borderLevel border_time matches 1 if score ing border_time matches 1 run function meetup:type/work/border/end {next_border_time:60}
 #2
-execute if score border_time border_time matches 0 if score borderLevel border_time matches 1 if score ing border_time matches 0 run function meetup:type/work/border/2_start
-execute if score border_time border_time matches 0 if score borderLevel border_time matches 2 if score ing border_time matches 1 run function meetup:type/work/border/2_end
+execute if score border_time border_time matches 0 if score borderLevel border_time matches 1 if score ing border_time matches 0 run function meetup:type/work/border/start {border_time:60,range:300}
+execute if score border_time border_time matches 0 if score borderLevel border_time matches 2 if score ing border_time matches 1 run function meetup:type/work/border/end {next_border_time:60}
 #3
-execute if score border_time border_time matches 0 if score borderLevel border_time matches 2 if score ing border_time matches 0 run function meetup:type/work/border/3_start
-execute if score border_time border_time matches 0 if score borderLevel border_time matches 3 if score ing border_time matches 1 run function meetup:type/work/border/3_end
+execute if score border_time border_time matches 0 if score borderLevel border_time matches 2 if score ing border_time matches 0 run function meetup:type/work/border/start {border_time:60,range:200}
+execute if score border_time border_time matches 0 if score borderLevel border_time matches 3 if score ing border_time matches 1 run function meetup:type/work/border/end {next_border_time:60}
 #4
-execute if score border_time border_time matches 0 if score borderLevel border_time matches 3 if score ing border_time matches 0 run function meetup:type/work/border/4_start
-execute if score border_time border_time matches 0 if score borderLevel border_time matches 4 if score ing border_time matches 1 run function meetup:type/work/border/4_end
-#5
-execute if score border_time border_time matches 0 if score borderLevel border_time matches 4 if score ing border_time matches 0 run function meetup:type/work/border/5_start
-execute if score border_time border_time matches 0 if score borderLevel border_time matches 5 if score ing border_time matches 1 run function meetup:type/work/border/5_end
-#6
-execute if score border_time border_time matches 0 if score borderLevel border_time matches 5 if score ing border_time matches 0 run function meetup:type/work/border/6_start
-execute if score border_time border_time matches 0 if score borderLevel border_time matches 6 if score ing border_time matches 1 run function meetup:type/work/border/6_end
-
+execute if score border_time border_time matches 0 if score borderLevel border_time matches 3 if score ing border_time matches 0 run function meetup:type/work/border/start {border_time:60,range:100}
+execute if score border_time border_time matches 0 if score borderLevel border_time matches 4 if score ing border_time matches 1 run function meetup:type/work/border/end {next_border_time:60}
 #display
 bossbar set border_time players @a
 execute unless score ing border_time matches 1.. run bossbar set border_time color yellow

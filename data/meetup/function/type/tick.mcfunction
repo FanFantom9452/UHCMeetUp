@@ -31,7 +31,9 @@ execute if score status command matches 1 at @e[type=marker,tag=first_set] posit
 execute if score status command matches 1 at @e[type=marker,tag=first_set] if block ~ 303 ~ air run setblock ~ 303 ~ ender_chest
 execute unless score status command matches 1 at @e[type=marker,tag=first_set] run setblock ~ 303 ~ air
 #setting UI
-execute if score status command matches 1 as @a[tag=admin] at @s run function meetup:type/work/ui/page/1/click
+execute if score status command matches 1 as @a[tag=admin] at @s if score @s page matches 1 run function meetup:type/work/ui/page/1/click
+execute if score status command matches 1 as @a[tag=admin] at @s if score @s page matches 2 run function meetup:type/work/ui/page/2/click
+execute if score status command matches 1 as @a[tag=admin] at @s if score @s page matches 3 run function meetup:type/work/ui/page/3/click
 
 clear @a command_block
 clear @a #meetup:settings_item[custom_data~{clear:1b}]
