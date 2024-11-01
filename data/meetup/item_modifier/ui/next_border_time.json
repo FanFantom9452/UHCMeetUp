@@ -6,11 +6,11 @@
     "name": [
       [
         {
-          "text": "§b隊伍數量 "
+          "text": "§b每次縮圈完畢間隔 "
         },
         {
           "score": {
-            "name": "teamCount",
+            "name": "next_border_time",
             "objective": "command"
           },
           "color": "gold",
@@ -19,7 +19,7 @@
           "underlined": true
         },
         {
-          "text": "§r §b隊§7(1隊則為Free For All / FFA)"
+          "text": "§r §b秒"
         }
       ]
     ]

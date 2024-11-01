@@ -14,7 +14,7 @@ execute unless items entity @s enderchest.0 * run function meetup:type/work/ui/p
 #execute unless items entity @s enderchest.12 * run function meetup:type/work/ui/page/2/set
 
 #third line
-execute unless items entity @s enderchest.18 * run function meetup:type/work/ui/turn_to_page {page:2}
 
-#execute unless items entity @s enderchest.26 * run scoreboard players set @s page 3
-#execute unless items entity @s enderchest.26 * run function meetup:type/work/ui/page/3/set
+
+execute unless items entity @s enderchest.18 * run function meetup:type/work/ui/turn_to_page {page:2}
+#execute unless items entity @s enderchest.26 * run function meetup:type/work/ui/turn_to_page {page:4}

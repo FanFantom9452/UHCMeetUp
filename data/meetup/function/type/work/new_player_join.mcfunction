@@ -9,7 +9,6 @@ title @s times 20 100 20
 title @s subtitle ["",{"text":"By","color":"dark_green"},{"text":": ","color":"gray"},{"text":"\u53ea","color":"red"},{"text":"\u662f","color":"gold"},{"text":"\u4e00","color":"yellow"},{"text":"\u500b","color":"green"},{"text":"\u5c0f","color":"aqua"},{"text":"\u98ef","color":"blue"},{"text":"\u6876","color":"light_purple"}]
 title @s title "§6§lUHC §c§lMeet Up"
 gamemode adventure @s
+#避免下一局的時候 玩家身上有物品 所以提前清除 且不影響初始物品設定
+clear @s
 team join waiting @s
-
-function meetup:type/work/ui/page/1/set
-

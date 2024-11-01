@@ -5,7 +5,6 @@ execute unless items entity @s enderchest.0 * run function meetup:type/work/ui/p
 execute unless items entity @s enderchest.1 * if score teamCount command matches 1..15 run scoreboard players add teamCount command 1
 execute unless items entity @s enderchest.1 * run function meetup:type/work/ui/page/1/set
 
-
 execute unless items entity @s enderchest.5 * run function meetup:type/item/game_default_items
 execute unless items entity @s enderchest.5 * run function meetup:type/work/ui/page/1/set
 
@@ -33,4 +32,5 @@ execute unless items entity @s enderchest.16 * run function meetup:type/work/ui/
 execute unless items entity @s enderchest.19 * if score teamCount command matches 2..16 run scoreboard players remove teamCount command 1
 execute unless items entity @s enderchest.19 * run function meetup:type/work/ui/page/1/set
 
+#換頁要在最底下
 execute unless items entity @s enderchest.26 * run function meetup:type/work/ui/turn_to_page {page:2}

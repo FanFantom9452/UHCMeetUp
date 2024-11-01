@@ -2,7 +2,8 @@
 
 schedule clear meetup:type/fighting
 schedule clear meetup:type/time
-
+schedule clear meetup:type/work/border/end/input
+schedule clear meetup:type/work/border/start/input
 
 scoreboard players set status command 0
 execute at @e[type=marker,tag=first_set] run fill ~15 300 ~15 ~-15 305 ~-15 air

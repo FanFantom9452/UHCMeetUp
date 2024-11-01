@@ -26,23 +26,7 @@ scoreboard players reset * lastAttackerID
 #關閉中介箱
 execute at @e[type=marker,tag=first_set] run setblock ~ 303 ~ air
 #隨機TP
-execute if score teamCount command matches 1 as @e[type=minecraft:marker,tag=first_set] at @s run spreadplayers ~ ~ 20 256 false @a[team=!spec]
-execute if score teamCount command matches 2 as @e[type=minecraft:marker,tag=first_set] at @s run spreadplayers ~ ~ 100 256 true @a[team=!spec]
-execute if score teamCount command matches 3 as @e[type=minecraft:marker,tag=first_set] at @s run spreadplayers ~ ~ 85 256 true @a[team=!spec]
-execute if score teamCount command matches 4 as @e[type=minecraft:marker,tag=first_set] at @s run spreadplayers ~ ~ 62 256 true @a[team=!spec]
-execute if score teamCount command matches 5 as @e[type=minecraft:marker,tag=first_set] at @s run spreadplayers ~ ~ 50 256 true @a[team=!spec]
-execute if score teamCount command matches 6 as @e[type=minecraft:marker,tag=first_set] at @s run spreadplayers ~ ~ 42 256 true @a[team=!spec]
-execute if score teamCount command matches 7 as @e[type=minecraft:marker,tag=first_set] at @s run spreadplayers ~ ~ 35 256 true @a[team=!spec]
-execute if score teamCount command matches 8 as @e[type=minecraft:marker,tag=first_set] at @s run spreadplayers ~ ~ 32 256 true @a[team=!spec]
-execute if score teamCount command matches 9 as @e[type=minecraft:marker,tag=first_set] at @s run spreadplayers ~ ~ 30 256 true @a[team=!spec]
-execute if score teamCount command matches 10..11 as @e[type=minecraft:marker,tag=first_set] at @s run spreadplayers ~ ~ 20 256 true @a[team=!spec]
-execute if score teamCount command matches 12..13 as @e[type=minecraft:marker,tag=first_set] at @s run spreadplayers ~ ~ 20 256 true @a[team=!spec]
-execute if score teamCount command matches 14..16 as @e[type=minecraft:marker,tag=first_set] at @s run spreadplayers ~ ~ 20 256 true @a[team=!spec]
-
-
-
-#地洞模式
-execute if score hole mode matches 2 run schedule function meetup:type/start/hole_mine 10t
+function meetup:type/start/spreadplayers/input
 
 gamemode survival @a[team=!spec]
 gamemode spectator @a[team=spec]
@@ -54,9 +38,9 @@ scoreboard players set winner.Testfor command 1
 function meetup:type/work/check_if_last_player_or_team
 
 #縮圈系統
-scoreboard players set borderLevel border_time 0
-scoreboard players set ing border_time 0
-scoreboard players set border_time border_time 60
-bossbar set border_time max 60
+execute store result storage meetup:border map_size int 1 run scoreboard players get map_size command
+execute store result storage meetup:border next_border_time int 1 run scoreboard players get next_border_time command
+function meetup:type/work/border/first_start with storage meetup:border
+
 #啟用遊戲計時
 function meetup:type/time

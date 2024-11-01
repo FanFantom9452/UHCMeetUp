@@ -3,8 +3,17 @@ tag @s add admin
 #設定初始物資
 execute unless data storage meetup:items Inventory run function meetup:type/item/game_default_items
 
+#如果沒有設定初始地圖大小 就預設512
+execute unless score map_size command matches -2147483648..2147483647 run scoreboard players set map_size command 512
+execute unless score border_range command matches -2147483648..2147483647 run scoreboard players set border_range command 100
+execute unless score border_time command matches -2147483648..2147483647 run scoreboard players set border_time command 60
+execute unless score next_border_time command matches -2147483648..2147483647 run scoreboard players set next_border_time command 60
+
+
 schedule clear meetup:type/fighting
 schedule clear meetup:type/time
+schedule clear meetup:type/work/border/end/input
+schedule clear meetup:type/work/border/start/input
 
 scoreboard players set status command 1
 function meetup:type/tick
