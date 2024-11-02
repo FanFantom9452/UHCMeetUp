@@ -2,6 +2,7 @@
 #剛加入遊戲的設定
 tp @s @e[type=minecraft:marker,tag=first_set,sort=nearest,limit=1]
 tp @s ~ 301 ~
+execute at @e[type=marker,tag=first_set] run spawnpoint @s ~ ~ ~
 playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.5 1
 effect give @s minecraft:blindness 5 0
 effect give @s minecraft:absorption 1 0 true

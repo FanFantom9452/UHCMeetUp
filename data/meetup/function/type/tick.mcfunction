@@ -35,8 +35,7 @@ execute if score status command matches 1 as @a[tag=admin] at @s if score @s pag
 execute if score status command matches 1 as @a[tag=admin] at @s if score @s page matches 2 run function meetup:type/work/ui/page/2/click
 execute if score status command matches 1 as @a[tag=admin] at @s if score @s page matches 3 run function meetup:type/work/ui/page/3/click
 
-clear @a command_block
-clear @a #meetup:settings_item[custom_data~{clear:1b}]
+clear @a *[custom_data~{clear:1b}]
 execute if score status command matches 1 as @e[type=item] if data entity @s Thrower run kill @s
 scoreboard players reset @a[scores={trigger=1..}] trigger
 #Loop

@@ -2,8 +2,14 @@
 clear @s *[custom_data~{clear:1b}]
 #first line
 item replace entity @s enderchest.0 with oak_hanging_sign[custom_name='"§e第§6 3 §e頁"',lore=['"§7當前頁數"'],custom_data={clear:1b}] 1
-item replace entity @s enderchest.1 with air
-item replace entity @s enderchest.2 with air
+#golden head
+execute if score mode.golden_head command matches 3.. run scoreboard players set mode.golden_head command 0 
+execute if score mode.golden_head command matches 2 run item replace entity @s enderchest.1 with enchanted_golden_apple[custom_name='"§b金頭顱模式 §7: §a開啟"',lore=['"§7點我來開啟或關閉"','"§7開啟後，擊殺玩家後箱子會出現一顆金頭顱"'],custom_data={clear:1b}] 1
+execute if score mode.golden_head command matches 0 run item replace entity @s enderchest.1 with enchanted_golden_apple[custom_name='"§b金頭顱模式 §7: §c關閉"',lore=['"§7點我來開啟或關閉"','"§7開啟後，擊殺玩家後箱子會出現一顆金頭顱"'],custom_data={clear:1b}] 1
+#TimeBomb
+execute if score mode.timebomb command matches 3.. run scoreboard players set mode.timebomb command 0 
+execute if score mode.timebomb command matches 2 run item replace entity @s enderchest.2 with tnt[custom_name='"§b定時炸彈模式 §7: §a開啟"',lore=['"§7點我來開啟或關閉"','"§7開啟後，玩家死亡後30秒箱子會產生爆炸"'],custom_data={clear:1b}] 1
+execute if score mode.timebomb command matches 0 run item replace entity @s enderchest.2 with tnt[custom_name='"§b定時炸彈模式 §7: §c關閉"',lore=['"§7點我來開啟或關閉"','"§7開啟後，玩家死亡後30秒箱子會產生爆炸"'],custom_data={clear:1b}] 1
 item replace entity @s enderchest.3 with air
 item replace entity @s enderchest.4 with air
 item replace entity @s enderchest.5 with air

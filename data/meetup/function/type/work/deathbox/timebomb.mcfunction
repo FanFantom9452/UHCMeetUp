@@ -1,0 +1,3 @@
+#Made By Fan_Fan_tom
+$summon creeper ~-0.5 ~ ~ {NoGravity:1b,Invulnerable:1b,PersistenceRequired:1b,NoAI:1b,ExplosionRadius:3b,Fuse:0,ignited:1b,CustomName:'[$(text),{"text":"的定時炸彈"}]',Tags:["death_chest"],Silent:1b,HandItems:[{},{id:"minecraft:stone",count:1,components:{"minecraft:custom_name":'"$(playerName)"'}}],HandDropChances:[-327.670F,-327.670F]}
+$execute positioned ~-0.5 ~ ~ run scoreboard players set @e[type=creeper,tag=death_chest,sort=nearest,limit=1] lastAttackerID $(killerID)

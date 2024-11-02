@@ -1,6 +1,12 @@
 #Made By Fan_Fan_tom
 #first line
 execute unless items entity @s enderchest.0 * run function meetup:type/work/ui/page/3/set
+#golden HEad
+execute unless items entity @s enderchest.1 * run scoreboard players add mode.golden_head command 1
+execute unless items entity @s enderchest.1 * run function meetup:type/work/ui/page/3/set
+execute unless items entity @s enderchest.2 * run scoreboard players add mode.timebomb command 1
+execute unless items entity @s enderchest.2 * run function meetup:type/work/ui/page/3/set
+
 
 #second line
 

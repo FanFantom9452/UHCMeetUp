@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": [],
+        "killing_blow": {
+          "source_entity": {
+            "type": "minecraft:creeper",
+            "nbt": "{Tags:[\"death_chest\"]}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "meetup:type/work/adv/timebomb_killed_player"
+  }
+}

@@ -1,8 +1,5 @@
 #Made By Fan_Fan_tom
 #time 1s
-
-
-
 #中途加入遊戲
 team join waiting @a[team=]
 gamemode spectator @a[team=waiting]
@@ -15,8 +12,8 @@ execute as @a unless score @s kill_list matches -2147483648..2147483647 run scor
 execute as @e[type=marker,tag=first_set] store result score @s pos_x run data get entity @s Pos[0]
 execute as @e[type=marker,tag=first_set] store result score @s pos_z run data get entity @s Pos[2]
 execute as @a at @s run title @s actionbar ["",{"text":"\u4e2d\u5fc3\u9ede (","color":"yellow"},{"score":{"name":"@e[type=minecraft:marker,tag=first_set,sort=nearest,limit=1]","objective":"pos_x"},"color":"green"},{"text":" , ","color":"yellow"},{"score":{"name":"@e[type=minecraft:marker,tag=first_set,sort=nearest,limit=1]","objective":"pos_z"},"color":"green"},{"text":") \u64ca\u6bba\u6578 ","color":"yellow"},{"score":{"name":"@s","objective":"kill_list"},"color":"green"}]
-
-
+#死亡箱60秒後自動清除
+execute as @e[type=marker,tag=death_chest] at @s run function meetup:type/work/deathbox/countdown
 
 
 
@@ -31,9 +28,6 @@ execute unless score ing border_time matches 1.. run bossbar set border_time col
 execute unless score ing border_time matches 1.. run bossbar set border_time name ["",{"text":"距離下次縮圈還剩 "},{"score":{"name":"border_time","objective":"border_time"},"bold":true,"underlined":true,"color":"green"},{"text":" 秒"}]
 execute if score ing border_time matches 1.. run bossbar set border_time color red
 execute if score ing border_time matches 1.. run bossbar set border_time name ["",{"text":"縮圈完畢還剩 "},{"score":{"name":"border_time","objective":"border_time"},"bold":true,"underlined":true,"color":"green"},{"text":" 秒"}]
-
-#borderLevel border_time
-#ing border_time
 
 #Loop
 execute if score status command matches 2 run schedule function meetup:type/time 1s

@@ -46,3 +46,5 @@ function meetup:type/item/item_creater/input {Slot:103,replaceSlot:"armor.head"}
 
 #msg
 tellraw @s ["",{"text":"UHC","color":"gold"},{"text":" Meet Up ","color":"red"},{"text":"| ","color":"gray"},{"text":"已領取初始裝備"}]
+#清除指令方塊
+clear @s command_block

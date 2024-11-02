@@ -7,8 +7,5 @@ execute as @a if score @s playerID = #tmp lastAttackerID run tag @s add killer
 #tp
 tp @s @a[tag=killer,sort=nearest,limit=1]
 
-
-
 #reset
-tag @a remove killer
-scoreboard players reset @s death
+tag @a[tag=killer] remove killer

@@ -12,8 +12,7 @@ scoreboard players reset * list
 scoreboard objectives remove list
 
 #清除死亡生成的箱子
-execute as @e[type=minecraft:armor_stand,tag=death_chest] at @s run fill ~ ~ ~ ~-1 ~ ~ air
-kill @e[type=minecraft:armor_stand,tag=death_chest]
+function meetup:type/work/deathbox/remove_all_chest
 
 effect clear @a
 title @a times 20 100 20
