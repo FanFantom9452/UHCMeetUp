@@ -1,5 +1,5 @@
 #Made By Fan_Fan_tom
-
+scoreboard players reset @a trigger
 schedule clear meetup:type/fighting
 schedule clear meetup:type/time
 schedule clear meetup:type/work/border/end/input

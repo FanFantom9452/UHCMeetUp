@@ -1,0 +1,27 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "target": "custom_name",
+    "name": [
+      [
+        {
+          "text": "§b玩家初始經驗等級 "
+        },
+        {
+          "score": {
+            "name": "playerExpLevel",
+            "objective": "command"
+          },
+          "color": "gold",
+          "bold": true,
+          "italic": false,
+          "underlined": true
+        },
+        {
+          "text": "§r §b等"
+        }
+      ]
+    ]
+  }
+]

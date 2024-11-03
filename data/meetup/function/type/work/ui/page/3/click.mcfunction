@@ -6,8 +6,10 @@ execute unless items entity @s enderchest.1 * run scoreboard players add mode.go
 execute unless items entity @s enderchest.1 * run function meetup:type/work/ui/page/3/set
 execute unless items entity @s enderchest.2 * run scoreboard players add mode.timebomb command 1
 execute unless items entity @s enderchest.2 * run function meetup:type/work/ui/page/3/set
-
-
+execute unless items entity @s enderchest.3 * run scoreboard players add mode.no_clean command 1
+execute unless items entity @s enderchest.3 * run function meetup:type/work/ui/page/3/set
+execute unless items entity @s enderchest.4 * run scoreboard players add mode.hole command 1
+execute unless items entity @s enderchest.4 * run function meetup:type/work/ui/page/3/set
 #second line
 
 #execute unless items entity @s enderchest.10 * run function meetup:type/item/game_default_items

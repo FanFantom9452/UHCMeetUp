@@ -8,6 +8,8 @@ execute as @a unless score @s playerID matches -2147483648..2147483647 run funct
 scoreboard players enable @a[tag=admin] trigger
 #管理員觸發安裝
 execute if score status command matches 0 as @a[scores={trigger=9487945},tag=admin] at @s align xyz run function meetup:install
+execute as @a[scores={trigger=9487946},tag=admin] at @s run function meetup:reset
+execute as @a[scores={trigger=9487947},tag=admin] at @s run function meetup:uninstall
 
 #剛加入遊戲的設定
 execute if score status command matches 1 as @a[team=] at @s run function meetup:type/work/new_player_join

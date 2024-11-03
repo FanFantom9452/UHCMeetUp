@@ -10,7 +10,8 @@ item replace entity @s enderchest.3 with lime_wool[custom_name='" "',lore=['"§7
 item modify entity @s enderchest.3 meetup:ui/border_time
 item replace entity @s enderchest.4 with lime_wool[custom_name='" "',lore=['"§7點我增加縮圈完畢間隔秒數"'],custom_data={clear:1b}] 1
 item modify entity @s enderchest.4 meetup:ui/next_border_time
-item replace entity @s enderchest.5 with air
+item replace entity @s enderchest.5 with lime_wool[custom_name='" "',lore=['"§7點我增加玩家初始經驗等級"'],custom_data={clear:1b}] 1
+item modify entity @s enderchest.5 meetup:ui/player_exp_level
 item replace entity @s enderchest.6 with air
 item replace entity @s enderchest.7 with air
 item replace entity @s enderchest.8 with air
@@ -25,7 +26,8 @@ item replace entity @s enderchest.12 with clock[custom_name='" "',lore=['"§7當
 item modify entity @s enderchest.12 meetup:ui/border_time
 item replace entity @s enderchest.13 with white_bed[custom_name='" "',lore=['"§7當前縮圈完畢間隔秒數"','"§7點我還原至預設值"'],custom_data={clear:1b}] 1
 item modify entity @s enderchest.13 meetup:ui/next_border_time
-item replace entity @s enderchest.14 with air
+item replace entity @s enderchest.14 with experience_bottle[custom_name='" "',lore=['"§7當前玩家初始經驗等級"','"§7點我還原至預設值"'],custom_data={clear:1b}] 1
+item modify entity @s enderchest.14 meetup:ui/player_exp_level
 item replace entity @s enderchest.15 with air
 item replace entity @s enderchest.16 with air
 item replace entity @s enderchest.17 with air
@@ -40,7 +42,8 @@ item replace entity @s enderchest.21 with red_wool[custom_name='" "',lore=['"§7
 item modify entity @s enderchest.21 meetup:ui/border_time
 item replace entity @s enderchest.22 with red_wool[custom_name='" "',lore=['"§7點我減少縮圈完畢間隔秒數"'],custom_data={clear:1b}] 1
 item modify entity @s enderchest.22 meetup:ui/next_border_time
-item replace entity @s enderchest.23 with air
+item replace entity @s enderchest.23 with red_wool[custom_name='" "',lore=['"§7點我減少玩家初始經驗等級"'],custom_data={clear:1b}] 1
+item modify entity @s enderchest.23 meetup:ui/player_exp_level
 item replace entity @s enderchest.24 with air
 item replace entity @s enderchest.25 with air
 item replace entity @s enderchest.26 with arrow[custom_name='"§e下一頁"',lore=['"§7點我切換至下一頁"'],custom_data={clear:1b}] 1

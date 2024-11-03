@@ -9,7 +9,8 @@ schedule function meetup:type/start/start 6s
 
 
 #給予初始裝備
-execute as @a[team=!spec] at @s run function meetup:type/item/give_default_items
+execute store result storage meetup:items playerExpLevel int 1 run scoreboard players get playerExpLevel command
+execute as @a[team=!spec] at @s run function meetup:type/item/give_default_items with storage meetup:items
 gamemode adventure @a
 
 #讓fighting function執行

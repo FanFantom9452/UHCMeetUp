@@ -14,9 +14,12 @@ execute unless score map_size command matches -2147483648..2147483647 run scoreb
 execute unless score border_range command matches -2147483648..2147483647 run scoreboard players set border_range command 100
 execute unless score border_time command matches -2147483648..2147483647 run scoreboard players set border_time command 60
 execute unless score next_border_time command matches -2147483648..2147483647 run scoreboard players set next_border_time command 60
+execute unless score playerExpLevel command matches -2147483648..2147483647 run scoreboard players set playerExpLevel command 87
 #設定模式預設值
 execute unless score mode.golden_head command matches -2147483648..2147483647 run scoreboard players set mode.golden_head command 2
 execute unless score mode.timebomb command matches -2147483648..2147483647 run scoreboard players set mode.timebomb command 0
+execute unless score mode.no_clean command matches -2147483648..2147483647 run scoreboard players set mode.no_clean command 2
+execute unless score mode.hole command matches -2147483648..2147483647 run scoreboard players set mode.hole command 0
 
 scoreboard players set status command 1
 function meetup:type/tick
@@ -48,6 +51,8 @@ scoreboard objectives add lastAttackerID dummy "最後攻擊我的玩家"
 
 scoreboard objectives add page dummy "第幾頁"
 
+scoreboard objectives add timer.no_clean dummy "防撿尾刀無敵時間"
+execute unless score timer.no_clean timer.no_clean matches -2147483648..2147483647 run scoreboard players set timer.no_clean timer.no_clean 100
 
 #設置隊伍
 team add team "剩餘隊伍"

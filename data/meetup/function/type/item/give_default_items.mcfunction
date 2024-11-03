@@ -1,7 +1,7 @@
 #Made By Fan_Fan_tom
 #給予容器中的所有物品
 clear @s
-xp set @s 87 levels
+$xp set @s $(playerExpLevel) levels
 function meetup:type/item/item_creater/input {Slot:0,replaceSlot:"hotbar.0"}
 function meetup:type/item/item_creater/input {Slot:1,replaceSlot:"hotbar.1"}
 function meetup:type/item/item_creater/input {Slot:2,replaceSlot:"hotbar.2"}

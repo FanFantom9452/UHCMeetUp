@@ -11,11 +11,12 @@ execute as @a unless score @s kill_list matches -2147483648..2147483647 run scor
 #取得中心點
 execute as @e[type=marker,tag=first_set] store result score @s pos_x run data get entity @s Pos[0]
 execute as @e[type=marker,tag=first_set] store result score @s pos_z run data get entity @s Pos[2]
-execute as @a at @s run title @s actionbar ["",{"text":"\u4e2d\u5fc3\u9ede (","color":"yellow"},{"score":{"name":"@e[type=minecraft:marker,tag=first_set,sort=nearest,limit=1]","objective":"pos_x"},"color":"green"},{"text":" , ","color":"yellow"},{"score":{"name":"@e[type=minecraft:marker,tag=first_set,sort=nearest,limit=1]","objective":"pos_z"},"color":"green"},{"text":") \u64ca\u6bba\u6578 ","color":"yellow"},{"score":{"name":"@s","objective":"kill_list"},"color":"green"}]
+execute as @a at @s unless score @s timer.no_clean matches -2147483648..2147483647 run title @s actionbar ["",{"text":"\u4e2d\u5fc3\u9ede (","color":"yellow"},{"score":{"name":"@e[type=minecraft:marker,tag=first_set,sort=nearest,limit=1]","objective":"pos_x"},"color":"green"},{"text":" , ","color":"yellow"},{"score":{"name":"@e[type=minecraft:marker,tag=first_set,sort=nearest,limit=1]","objective":"pos_z"},"color":"green"},{"text":") \u64ca\u6bba\u6578 ","color":"yellow"},{"score":{"name":"@s","objective":"kill_list"},"color":"green"}]
 #死亡箱60秒後自動清除
 execute as @e[type=marker,tag=death_chest] at @s run function meetup:type/work/deathbox/countdown
 
-
+#地洞模式 限高 45 格
+execute if score mode.hole command matches 2 as @a at @s if entity @s[y=46,dy=300,gamemode=survival] run function meetup:type/work/player/hole/height_limit
 
 #縮圈 / function meetup:type/start/start ==> function meetup:type/work/border/first_start ==> 控制縮圈系統
 team join yellow 遊戲時間

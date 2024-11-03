@@ -10,8 +10,14 @@ execute if score mode.golden_head command matches 0 run item replace entity @s e
 execute if score mode.timebomb command matches 3.. run scoreboard players set mode.timebomb command 0 
 execute if score mode.timebomb command matches 2 run item replace entity @s enderchest.2 with tnt[custom_name='"§b定時炸彈模式 §7: §a開啟"',lore=['"§7點我來開啟或關閉"','"§7開啟後，玩家死亡後30秒箱子會產生爆炸"'],custom_data={clear:1b}] 1
 execute if score mode.timebomb command matches 0 run item replace entity @s enderchest.2 with tnt[custom_name='"§b定時炸彈模式 §7: §c關閉"',lore=['"§7點我來開啟或關閉"','"§7開啟後，玩家死亡後30秒箱子會產生爆炸"'],custom_data={clear:1b}] 1
-item replace entity @s enderchest.3 with air
-item replace entity @s enderchest.4 with air
+#NoClean
+execute if score mode.no_clean command matches 3.. run scoreboard players set mode.no_clean command 0 
+execute if score mode.no_clean command matches 2 run item replace entity @s enderchest.3 with iron_sword[custom_name='"§b防撿尾刀模式 §7: §a開啟"',lore=['"§7點我來開啟或關閉"','"§7開啟後，擊殺玩家後獲得無敵 5 秒"','"§c無敵期間攻擊其他玩家後取消無敵"'],custom_data={clear:1b},attribute_modifiers={modifiers:[],show_in_tooltip:false}] 1
+execute if score mode.no_clean command matches 0 run item replace entity @s enderchest.3 with iron_sword[custom_name='"§b防撿尾刀模式 §7: §c關閉"',lore=['"§7點我來開啟或關閉"','"§7開啟後，擊殺玩家後獲得無敵 5 秒"','"§c無敵期間攻擊其他玩家後取消無敵"'],custom_data={clear:1b},attribute_modifiers={modifiers:[],show_in_tooltip:false}] 1
+#Hole Mode
+execute if score mode.hole command matches 3.. run scoreboard players set mode.hole command 0 
+execute if score mode.hole command matches 2 run item replace entity @s enderchest.4 with diamond_pickaxe[custom_name='"§b地洞模式 §7: §a開啟"',lore=['"§7點我來開啟或關閉"','"§7開啟後，玩家起始位置會在地底"','"§c限制高度 45 格"'],custom_data={clear:1b},attribute_modifiers={modifiers:[],show_in_tooltip:false}] 1
+execute if score mode.hole command matches 0 run item replace entity @s enderchest.4 with diamond_pickaxe[custom_name='"§b地洞模式 §7: §c關閉"',lore=['"§7點我來開啟或關閉"','"§7開啟後，玩家起始位置會在地底"','"§c限制高度 45 格"'],custom_data={clear:1b},attribute_modifiers={modifiers:[],show_in_tooltip:false}] 1
 item replace entity @s enderchest.5 with air
 item replace entity @s enderchest.6 with air
 item replace entity @s enderchest.7 with air

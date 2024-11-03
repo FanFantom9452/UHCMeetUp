@@ -7,9 +7,9 @@ item modify entity @s enderchest.1 meetup:ui/team_count
 item replace entity @s enderchest.2 with air
 item replace entity @s enderchest.3 with air
 item replace entity @s enderchest.4 with air
-item replace entity @s enderchest.5 with wooden_sword[custom_name='"§d將初始物資還原至預設值"',lore=['"§7點我將大家的初始物資設定為"','"§7指令包的預設值"'],custom_data={clear:1b}] 1
-item replace entity @s enderchest.6 with diamond_sword[custom_name='"§e提取初始物資"',lore=['"§7點我領取當前的初始物資"'],custom_data={clear:1b}] 1
-item replace entity @s enderchest.7 with netherite_sword[custom_name='"§b儲存當前背包為初始物資"',lore=['"§7點我將大家的初始物資設定為"','"§7您現在背包內的所有物品"'],custom_data={clear:1b}] 1
+item replace entity @s enderchest.5 with wooden_sword[custom_name='"§d將初始物資還原至預設值"',lore=['"§7點我將大家的初始物資設定為"','"§7指令包的預設值"'],custom_data={clear:1b},attribute_modifiers={modifiers:[],show_in_tooltip:false}] 1
+item replace entity @s enderchest.6 with diamond_sword[custom_name='"§e提取初始物資"',lore=['"§7點我領取當前的初始物資"'],custom_data={clear:1b},attribute_modifiers={modifiers:[],show_in_tooltip:false}] 1
+item replace entity @s enderchest.7 with netherite_sword[custom_name='"§b儲存當前背包為初始物資"',lore=['"§7點我將大家的初始物資設定為"','"§7您現在背包內的所有物品"'],custom_data={clear:1b},attribute_modifiers={modifiers:[],show_in_tooltip:false}] 1
 item replace entity @s enderchest.8 with air
 
 #second line
