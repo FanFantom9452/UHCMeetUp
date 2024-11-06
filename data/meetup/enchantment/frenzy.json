@@ -1,0 +1,33 @@
+{
+  "description": "狂熱",
+  "supported_items": "#meetup:special_enchantment/weapon",
+  "primary_items": "minecraft:flow_armor_trim_smithing_template",
+  "weight": 1,
+  "max_level": 5,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 30,
+    "per_level_above_first": 5
+  },
+  "anvil_cost": 7,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "id": "frenzy",
+        "attribute": "minecraft:attack_speed",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.1,
+          "per_level_above_first": 0.1
+        },
+        "operation": "add_multiplied_total"
+      }
+    ]
+  }
+}
