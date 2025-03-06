@@ -20,6 +20,8 @@ execute unless score mode.golden_head command matches -2147483648..2147483647 ru
 execute unless score mode.timebomb command matches -2147483648..2147483647 run scoreboard players set mode.timebomb command 0
 execute unless score mode.no_clean command matches -2147483648..2147483647 run scoreboard players set mode.no_clean command 2
 execute unless score mode.hole command matches -2147483648..2147483647 run scoreboard players set mode.hole command 0
+execute unless score mode.double_hp command matches -2147483648..2147483647 run scoreboard players set mode.double_hp command 0
+execute unless score mode.no_sheild command matches -2147483648..2147483647 run scoreboard players set mode.no_sheild command 0 
 
 scoreboard players set status command 1
 function meetup:type/tick

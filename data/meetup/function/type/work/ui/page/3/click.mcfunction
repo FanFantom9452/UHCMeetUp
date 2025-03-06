@@ -10,6 +10,10 @@ execute unless items entity @s enderchest.3 * run scoreboard players add mode.no
 execute unless items entity @s enderchest.3 * run function meetup:type/work/ui/page/3/set
 execute unless items entity @s enderchest.4 * run scoreboard players add mode.hole command 1
 execute unless items entity @s enderchest.4 * run function meetup:type/work/ui/page/3/set
+execute unless items entity @s enderchest.5 * run scoreboard players add mode.double_hp command 1
+execute unless items entity @s enderchest.5 * run function meetup:type/work/ui/page/3/set
+execute unless items entity @s enderchest.6 * run scoreboard players add mode.no_sheild command 1
+execute unless items entity @s enderchest.6 * run function meetup:type/work/ui/page/3/set
 #second line
 
 #execute unless items entity @s enderchest.10 * run function meetup:type/item/game_default_items

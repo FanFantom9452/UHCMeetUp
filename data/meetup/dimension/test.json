@@ -1,0 +1,36 @@
+{
+  "type": "meetup:test",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "biomes": [
+        {
+          "biome": "minecraft:ice_spikes",
+          "parameters": {
+            "temperature": -1,
+            "humidity": 1,
+            "continentalness": -0.5,
+            "erosion": 0.5,
+            "weirdness": 1,
+            "depth": 0,
+            "offset": 1
+          }
+        },
+        {
+          "biome": "minecraft:plains",
+          "parameters": {
+            "temperature": 0,
+            "humidity": -1,
+            "continentalness": 0.5,
+            "erosion": 0.5,
+            "weirdness": -1,
+            "depth": 0,
+            "offset": 0
+          }
+        }
+      ],
+      "type": "minecraft:multi_noise"
+    },
+    "settings": "minecraft:overworld"
+  }
+}

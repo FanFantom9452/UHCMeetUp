@@ -1,0 +1,34 @@
+{
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:consumable": {
+        "consume_seconds": 1.6,
+        "animation": "eat",
+        "has_consume_particles": true,
+        "on_consume_effects": [
+          {
+            "type": "minecraft:apply_effects",
+            "effects": [
+              {
+                "id": "minecraft:absorption",
+                "amplifier": 0,
+                "duration": 2400,
+                "ambient": true,
+                "show_particles": true,
+                "show_icon": true
+              },
+              {
+                "id": "minecraft:regeneration",
+                "amplifier": 1,
+                "duration": 200,
+                "ambient": true,
+                "show_particles": true,
+                "show_icon": true
+              }
+            ]
+          }
+        ]
+      },
+      "minecraft:custom_data": "{double:1b}"
+    }
+  }

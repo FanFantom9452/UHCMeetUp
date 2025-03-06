@@ -13,6 +13,9 @@ execute store result storage meetup:items playerExpLevel int 1 run scoreboard pl
 execute as @a[team=!spec] at @s run function meetup:type/item/give_default_items with storage meetup:items
 gamemode adventure @a
 
+#雙倍模式
+execute if score mode.double_hp command matches 2 as @a[team=!spec] run attribute @s max_health modifier add double_hp 20 add_value
+
 #讓fighting function執行
 scoreboard players set status command 2
 function meetup:type/fighting

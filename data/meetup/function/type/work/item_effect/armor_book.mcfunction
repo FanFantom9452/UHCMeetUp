@@ -8,4 +8,4 @@ execute if score #tmp command matches 1..20 run function meetup:type/item/armor/
 execute if score #tmp command matches 21..40 run function meetup:type/item/armor/diamond_leggings
 execute if score #tmp command matches 41..70 run function meetup:type/item/armor/diamond_helmet
 execute if score #tmp command matches 71..100 run function meetup:type/item/armor/diamond_boots
-scoreboard players reset @s use_Kbook
+
